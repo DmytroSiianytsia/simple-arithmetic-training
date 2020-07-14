@@ -19,15 +19,15 @@
         v-else-if="isCorrectAnswer"
         key="card-correct"
       >
-        <p class="card__text">МОЛОДЕЦ !!! Правильный ответ.</p>
+        <p class="card__text">МОЛОДЕЦЬ ! Правильна відповідь.</p>
         <button class="card__button" @click="nextQuestion">
-          следующий пример
+          слідуючий приклад
         </button>
       </div>
       <div class="card card-wrong" v-else-if="isWrongAnswer" key="card-wrong">
-        <p class="card__text">МИМО !!! Ответ не правильный</p>
+        <p class="card__text">Не поспішай! Відповідь не правильна.</p>
         <button class="card__button" @click="nextQuestion">
-          следующий пример
+          слідуючий приклад
         </button>
       </div>
     </transition>

@@ -1,15 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Main from '../views/Main.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'main',
+    name: 'content',
     meta: {layout: 'main'},
-    component: Main
+    component: () => import('../views/Content.vue')
   },
   {
     path: '/registration',

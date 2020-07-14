@@ -41,11 +41,11 @@ export default {
   display: grid;
   align-items: center;
   grid-template-areas:
-    'hd hd hd hd hd hd'
-    'sb cn cn cn cn cn'
-    'sb cn cn cn cn cn'
-    'sb cn cn cn cn cn'
-    'ft ft ft ft ft ft';
+    'hd hd hd hd hd hd hd'
+    'sb cn cn cn cn cn cn'
+    'sb cn cn cn cn cn cn'
+    'sb cn cn cn cn cn cn'
+    'ft ft ft ft ft ft ft';
 
   &__header {
     grid-area: hd;
