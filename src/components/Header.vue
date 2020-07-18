@@ -7,7 +7,7 @@
       <h1 class="header__title">
         Тренування арифметики
       </h1>
-      <div class="header__user">Привіт, {{ (user.name = 'Гість') }}</div>
+      <div class="header__user">Привіт, {{ name }}</div>
     </div>
   </div>
 </template>
@@ -15,14 +15,14 @@
 <script>
 export default {
   data: () => ({
-    user: {
-      name: '',
-      id: ''
-    },
     date: new Date(),
     interval: null
   }),
-  computed: {},
+  computed: {
+    name() {
+      return this.$store.state.auth.name
+    }
+  },
   mounted() {
     this.interval = setInterval(() => {
       this.date = new Date()
@@ -53,7 +53,7 @@ export default {
 
   &__data-container {
     display: flex;
-    width: 220px;
+    width: 12em;
     align-items: center;
   }
 
@@ -65,6 +65,31 @@ export default {
 
   &__title {
     font-size: 2.5em;
+  }
+
+  @media (max-width: 760px) {
+    &__container {
+      width: 90%;
+    }
+
+    &__data-container {
+      width: 9em;
+    }
+
+    &__title {
+      font-size: 1.5em;
+    }
+
+    &__data,
+    &__user {
+      font-size: 1em;
+      line-height: 1em;
+    }
+  }
+  @media (max-width: 600px) {
+    &__container {
+      width: 95%;
+    }
   }
 }
 </style>

@@ -1,15 +1,12 @@
 <template>
-  <Form />
+  <Form title="Реєстрація" btnText="Зареєструватися" isRegister="true" />
 </template>
 
 <script>
 import Form from '@/components/Form.vue'
 
 export default {
-  data: () => ({
-    name: '',
-    password: ''
-  }),
+  name: 'registration',
   components: {
     Form
   }

@@ -1,0 +1,9 @@
+.show-enter,
+.show-leave-to {
+  opacity: 0;
+}
+
+.show-enter-active,
+.show-leave-active {
+  transition: opacity 0.3s;
+}

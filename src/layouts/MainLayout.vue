@@ -4,12 +4,14 @@
       <Header />
     </div>
     <div class="main-layout__side-bar">
-      <SideBar />
+      <transition name="show" mode="out-in">
+        <SideBar />
+      </transition>
     </div>
     <div class="main-layout__content">
-      <component :is="component">
+      <transition name="show" mode="out-in">
         <router-view></router-view>
-      </component>
+      </transition>
     </div>
     <div class="main-layout__footer">
       <Footer />
@@ -18,25 +20,23 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-import SideBar from '@/components/SideBar.vue'
-import Footer from '@/components/Footer.vue'
-import Card from '@/components/Card'
+import Header from '../components/Header.vue'
+import SideBar from '../components/SideBar.vue'
+import Footer from '../components/Footer.vue'
+import Content from '../views/Content.vue'
 
 export default {
-  data: () => ({
-    component: 'card'
-  }),
   components: {
     Header,
     SideBar,
     Footer,
-    Card
+    Content
   }
 }
 </script>
 
 <style lang="scss">
+@import url('../animation-show.scss');
 .main-layout {
   display: grid;
   align-items: center;
@@ -56,6 +56,7 @@ export default {
   &__content {
     grid-area: cn;
     justify-self: center;
+    align-items: center;
   }
   &__footer {
     grid-area: ft;

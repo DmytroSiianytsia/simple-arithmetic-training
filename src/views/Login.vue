@@ -1,15 +1,12 @@
 <template>
-  <Form btnText="Вхід" />
+  <Form title="Вхід" btnText="Зайти" />
 </template>
 
 <script>
 import Form from '@/components/Form.vue'
 
 export default {
-  data: () => ({
-    name: '',
-    password: ''
-  }),
+  name: 'login',
   components: {
     Form
   }

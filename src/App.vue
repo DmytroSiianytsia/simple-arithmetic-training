@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <component :is="getLayout">
-      <router-view />
-    </component>
+    <transition name="show" mode="out-in">
+      <component :is="getLayout">
+        <router-view />
+      </component>
+    </transition>
   </div>
 </template>
 
@@ -13,8 +15,9 @@ import MainLayout from './layouts/MainLayout.vue'
 export default {
   computed: {
     getLayout() {
-      console.log(this.$route.meta)
-      return this.$route.meta.layout + '-layout'
+      if (this.$route.meta.layout) {
+        return this.$route.meta.layout + '-layout'
+      }
     }
   },
   components: {
@@ -25,9 +28,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import url('./animation-show.scss');
 body {
   margin: 0;
   padding: 0;
   font-family: 'Baloo Da 2', 'sans-serif', cursive;
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 12px;
+  }
 }
 </style>
