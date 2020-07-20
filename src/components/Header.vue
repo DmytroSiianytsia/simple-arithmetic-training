@@ -64,6 +64,7 @@ export default {
   }
 
   &__title {
+    text-align: center;
     font-size: 2.5em;
   }
 

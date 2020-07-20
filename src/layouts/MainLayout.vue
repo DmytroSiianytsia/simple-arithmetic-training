@@ -7,9 +7,13 @@
       class="main-layout__menu-burger"
       src="../img/menu-burger.svg"
       alt="menu"
-      @click="isShow = !isShow"
+      @click="toggleShow"
     />
-    <div class="main-layout__side-bar" :class="{ show: isShow }">
+    <div
+      class="main-layout__side-bar"
+      :class="{ show: isShow }"
+      @click="toggleShow"
+    >
       <transition name="show" mode="out-in">
         <SideBar />
       </transition>
@@ -35,6 +39,12 @@ export default {
   data: () => ({
     isShow: false
   }),
+  methods: {
+    toggleShow() {
+      console.log('click')
+      this.isShow = !this.isShow
+    }
+  },
   components: {
     Header,
     SideBar,
