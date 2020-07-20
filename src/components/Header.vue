@@ -64,8 +64,10 @@ export default {
   }
 
   &__title {
+    margin-right: 0.5em;
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.4em;
+    line-height: 1;
   }
 
   @media (max-width: 760px) {
