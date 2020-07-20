@@ -101,6 +101,7 @@ export default {
       z-index: 1;
       top: 5em;
       left: -400px;
+      transition: 0.5s;
     }
 
     &__menu-burger {
