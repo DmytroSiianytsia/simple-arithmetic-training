@@ -13,15 +13,15 @@ Vue.config.productionTip = false
 Vue.filter('dateFormat', dateFormat)
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCGPD2GyqACkEv_6Hv7Fpeb__UiH7sGT0k",
-  authDomain: "simple-arithmetic.firebaseapp.com",
-  databaseURL: "https://simple-arithmetic.firebaseio.com",
-  projectId: "simple-arithmetic",
-  storageBucket: "simple-arithmetic.appspot.com",
-  messagingSenderId: "799171856557",
-  appId: "1:799171856557:web:1e6113ee41897bb54b5e24",
-  measurementId: "G-ZMS9S0Q36P"
-};
+  apiKey: "AIzaSyA7Z3AuGTn29Wr4_PWmrmFFt3lmLfyIAUs",
+  authDomain: "arithmetic-training.firebaseapp.com",
+  databaseURL: "https://arithmetic-training.firebaseio.com",
+  projectId: "arithmetic-training",
+  storageBucket: "arithmetic-training.appspot.com",
+  messagingSenderId: "549151282776",
+  appId: "1:549151282776:web:a5bc086a60e4ef59f39c2d",
+  measurementId: "G-BDQY1H42VE"
+}
 
 firebase.initializeApp(firebaseConfig);
 
