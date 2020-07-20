@@ -2,7 +2,7 @@
   <div class="card card-correct">
     <p class="card__text">Молодець! Правильна відповідь.</p>
     <button class="card__button" @click="nextQuestion">
-      слідуючий приклад
+      наступний приклад
     </button>
   </div>
 </template>
