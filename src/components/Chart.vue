@@ -1,6 +1,6 @@
 <template>
   <div class="chart">
-    <canvas ref="canvas" width="360" height="360"></canvas>
+    <canvas ref="canvas" width="300" height="300"></canvas>
   </div>
 </template>
 
@@ -29,3 +29,17 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.chart {
+  width: 25em;
+  height: 25em;
+
+  @media (min-width: 520px) {
+    .chart {
+      width: 18em;
+      height: 18em;
+    }
+  }
+}
+</style>

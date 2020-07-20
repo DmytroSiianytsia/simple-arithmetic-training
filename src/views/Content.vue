@@ -73,10 +73,10 @@ export default {
 
 <style lang="scss">
 .content {
-  height: 60vh;
+  height: calc(100vh - 10em);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 

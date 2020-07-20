@@ -96,4 +96,10 @@ export default {
   pointer-events: none;
   opacity: 0.6;
 }
+
+@media (max-width: 520px) {
+  .side-bar {
+    background-color: rgba(196, 223, 230, 0.7);
+  }
+}
 </style>

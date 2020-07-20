@@ -64,7 +64,9 @@ export default {
 
 .statistic {
   width: 25.5em;
+  height: calc(100vh - 10em);
   display: flex;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
 

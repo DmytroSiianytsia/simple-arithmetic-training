@@ -88,7 +88,17 @@ export default {
   }
   @media (max-width: 600px) {
     &__container {
-      width: 95%;
+      width: 96%;
+    }
+  }
+
+  @media (max-width: 520px) {
+    &__data-container {
+      width: 9em;
+    }
+
+    &__title {
+      font-size: 1.2em;
     }
   }
 }
