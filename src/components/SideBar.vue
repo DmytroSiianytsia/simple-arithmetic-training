@@ -97,7 +97,7 @@ export default {
   opacity: 0.6;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 720px) {
   .side-bar {
     background-color: rgba(196, 223, 230, 0.7);
   }

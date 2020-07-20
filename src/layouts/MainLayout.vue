@@ -86,7 +86,7 @@ export default {
   }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 720px) {
   .main-layout {
     grid-template-areas:
       'hd'
