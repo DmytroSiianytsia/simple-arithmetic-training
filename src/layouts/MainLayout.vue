@@ -41,7 +41,6 @@ export default {
   }),
   methods: {
     toggleShow() {
-      console.log('click')
       this.isShow = !this.isShow
     }
   },
