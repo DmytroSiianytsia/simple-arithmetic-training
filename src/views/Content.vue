@@ -112,7 +112,7 @@ export default {
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 767px) {
   .content {
     flex-direction: row;
     justify-content: space-between;
