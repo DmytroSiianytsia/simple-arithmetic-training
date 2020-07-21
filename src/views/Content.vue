@@ -1,6 +1,8 @@
 <template>
   <div class="content">
-    <FormMinMaxValues />
+    <div class="content__min-max">
+      <FormMinMaxValues />
+    </div>
     <transition name="flip" appear mode="out-in">
       <QuestionCard
         v-if="!isClick"
@@ -78,6 +80,10 @@ export default {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+
+  &__min-max {
+    width: 18em;
+  }
 }
 
 .flip-enter-active {
@@ -87,6 +93,7 @@ export default {
 .flip-leave-active {
   animation: flip-out 0.2s ease-out;
 }
+
 @keyframes flip-out {
   from {
     transform: rotateY(0deg);
@@ -95,6 +102,7 @@ export default {
     transform: rotateY(90deg);
   }
 }
+
 @keyframes flip-in {
   from {
     transform: rotateY(90deg);

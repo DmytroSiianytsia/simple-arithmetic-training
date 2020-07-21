@@ -89,6 +89,7 @@ export default {
       line-height: 1em;
     }
   }
+
   @media (max-width: 600px) {
     &__container {
       width: 96%;

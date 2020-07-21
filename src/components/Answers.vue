@@ -26,6 +26,8 @@ export default {
 
 <style lang="scss">
 .answers {
+  text-align: center;
+
   &__item {
     margin: 0;
     padding: 0 0.5em;
@@ -41,6 +43,7 @@ export default {
   &__correct {
     color: rgb(75, 192, 192);
   }
+
   &__wrong {
     color: rgb(255, 99, 132);
   }

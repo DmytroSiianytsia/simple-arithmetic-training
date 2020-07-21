@@ -50,6 +50,18 @@
   }
 }
 
+.card-correct,
+.card-wrong {
+  justify-content: center;
+  align-items: center;
+}
+.card-correct {
+  background: rgb(125, 241, 179);
+}
+.card-wrong {
+  background: rgb(241, 131, 131);
+}
+
 @media (orientation: landscape) {
   .card {
     width: 20em;
@@ -63,16 +75,4 @@
       font-size: 0.8em;
     }
   }
-}
-
-.card-correct,
-.card-wrong {
-  justify-content: center;
-  align-items: center;
-}
-.card-correct {
-  background: rgb(125, 241, 179);
-}
-.card-wrong {
-  background: rgb(241, 131, 131);
 }
