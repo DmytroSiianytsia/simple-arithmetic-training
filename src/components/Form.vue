@@ -24,18 +24,26 @@
           class="form__input"
           type="email"
           id="email"
-          v-model.trim="email"
+          v-model.lazy="email"
+          @change="checkEmail"
           required
         />
+        <small class="form__error" v-if="showErrorEmail">
+          Введіть коректний email
+        </small>
       </div>
       <div class="form__password">
         <label class="form__label" for="password">пароль</label>
         <input
           class="form__input"
           type="password"
-          v-model.trim="password"
+          v-model.trim.lazy="password"
+          @change="checkPassword"
           required
         />
+        <small class="form__error" v-if="showErrorPassword">
+          Довжина пароля мінімум {{ minLength }} символів
+        </small>
       </div>
     </div>
 
@@ -68,10 +76,28 @@ export default {
   data: () => ({
     name: '',
     email: '',
-    password: ''
+    password: '',
+    minLength: 6,
+    showErrorEmail: false,
+    showErrorPassword: false
   }),
   methods: {
+    checkEmail() {
+      if (this.email.match(/.+@.{2,6}\..{2,4}/)) {
+        this.showErrorEmail = false
+      } else {
+        this.showErrorEmail = true
+      }
+    },
+    checkPassword() {
+      if (this.password.length < this.minLength) {
+        this.showErrorPassword = true
+      } else {
+        this.showErrorPassword = false
+      }
+    },
     async onSubmit() {
+      if (this.showErrorEmail || this.showErrorPassword) return
       if (this.isRegister) {
         const user = {
           name: this.name,
@@ -129,6 +155,7 @@ export default {
 
   &__mail,
   &__password {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 1em;
@@ -190,6 +217,12 @@ export default {
     &:hover {
       color: #66a5ad;
     }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: -1.8em;
+    color: red;
   }
 }
 
