@@ -103,4 +103,12 @@ export default {
     transform: rotateY(0deg);
   }
 }
+
+@media (orientation: landscape) {
+  .content {
+    width: calc(100vw - 15%);
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 </style>

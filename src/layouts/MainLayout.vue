@@ -121,4 +121,11 @@ export default {
     left: 0;
   }
 }
+
+@media (orientation: landscape) {
+  .main-layout__content {
+    width: 100%;
+    justify-self: start;
+  }
+}
 </style>

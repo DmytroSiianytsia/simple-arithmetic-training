@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss">
 @import url('./animation-show.scss');
+
 body {
   margin: 0;
   padding: 0;

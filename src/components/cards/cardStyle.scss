@@ -50,6 +50,21 @@
   }
 }
 
+@media (orientation: landscape) {
+  .card {
+    width: 20em;
+    height: 10em;
+
+    &__content {
+      height: 6em;
+    }
+
+    &__button {
+      font-size: 0.8em;
+    }
+  }
+}
+
 .card-correct,
 .card-wrong {
   justify-content: center;
