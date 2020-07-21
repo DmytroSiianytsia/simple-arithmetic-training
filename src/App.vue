@@ -41,4 +41,10 @@ body {
     font-size: 12px;
   }
 }
+
+@media (max-height: 767px) {
+  body {
+    font-size: 12px;
+  }
+}
 </style>

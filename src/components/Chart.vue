@@ -34,12 +34,5 @@ export default {
 .chart {
   width: 25em;
   height: 25em;
-
-  @media (min-width: 520px) {
-    .chart {
-      width: 18em;
-      height: 18em;
-    }
-  }
 }
 </style>

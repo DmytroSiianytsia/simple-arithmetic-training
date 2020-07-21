@@ -63,7 +63,6 @@ export default {
 }
 
 .statistic {
-  width: 25.5em;
   height: calc(100vh - 10em);
   display: flex;
   justify-content: space-around;
@@ -83,6 +82,12 @@ export default {
 
   &__wrong-result {
     color: rgb(255, 99, 132);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 767px) {
+  .statistic {
+    flex-direction: row;
   }
 }
 </style>
