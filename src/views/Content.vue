@@ -106,7 +106,6 @@ export default {
 
 @media (orientation: landscape) {
   .content {
-    width: calc(100vw - 15%);
     flex-direction: row;
     justify-content: space-between;
   }

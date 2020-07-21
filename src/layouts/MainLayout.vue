@@ -126,6 +126,7 @@ export default {
   .main-layout__content {
     width: 100%;
     justify-self: start;
+    justify-content: space-between;
   }
 }
 </style>

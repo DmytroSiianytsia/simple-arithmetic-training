@@ -28,6 +28,7 @@ export default {
 .answers {
   &__item {
     margin: 0;
+    padding: 0 0.5em;
   }
 
   &__correct,
