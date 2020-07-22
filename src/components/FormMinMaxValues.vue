@@ -105,7 +105,8 @@ export default {
   &__error {
     position: absolute;
     top: 4em;
-    left: 6.5em;
+    left: 50%;
+    transform: translate(-50%);
     color: red;
   }
 }

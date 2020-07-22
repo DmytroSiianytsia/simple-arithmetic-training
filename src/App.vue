@@ -44,7 +44,7 @@ body {
 
 @media (max-height: 767px) {
   body {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 </style>
